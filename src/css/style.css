@@ -1,1 +1,67 @@
 @import url(variables.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-3);
+    padding: 0 1%;
+}
+
+header{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-areas: "logo logo menu menu menu menu menu menu option option";
+    column-gap: 2%;
+    padding-top: 23px;
+}
+
+header .div__logo{
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .div__logo img{
+    height: 100%;
+    width: 80%;
+    object-fit: contain;
+}
+
+header nav{
+    grid-area: menu;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav ul{
+    grid-area: menu;
+    display: flex;
+    justify-content: center;
+    gap: 33px;
+    list-style: none;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    font-family: "Inter_28pt-SemiBold";
+    color: var(--color-1);
+    font-size: 28px;
+}
+
+header .div__option{
+    grid-area: option;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 19%;
+    gap: 12%
+}
+
+header .div__option img{
+    object-fit: cover;
+}
