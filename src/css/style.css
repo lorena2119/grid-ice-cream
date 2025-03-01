@@ -22,6 +22,7 @@ header{
 header .div__logo{
     grid-area: logo;
     display: flex;
+    height: 95px;
     align-items: center;
     justify-content: center;
 }
@@ -69,7 +70,7 @@ header .div__option img{
 main{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 591% 1fr;
+    grid-template-rows: 137% 1fr;
     grid-template-areas: "product content";
     column-gap: 2%;
     padding-top: 4%;
@@ -78,6 +79,7 @@ main{
 main .section__product{
     grid-area: product;
     position: relative;
+    
 }
 
 main .section__product article{
@@ -128,4 +130,52 @@ main .section__product > img:nth-child(4){
     z-index: 1;
     bottom: -255px;
     left: 0;
+}
+
+main .section__contentt{
+    grid-area: content;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items:  flex-start
+}
+
+main .section__contentt article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-1);
+    padding: 123px 0 69px 0;
+
+}
+
+main .section__contentt article h1{
+    font-family: "Inter_28pt-Bold";
+    font-size: 69.56px;
+}
+
+main .section__contentt article p:nth-child(2){
+    font-family: "lalezar-regular";
+    font-size: 32px;
+}
+
+main .section__contentt article p:nth-child(3){
+    font-family: "Inder-Regular";
+    font-size: 24px;
+    padding: 10px;
+    width: 628px;
+}
+
+main .section__contentt a{
+    text-decoration: none;
+    background-color: var(--color-2);
+    color: var(--color-1);
+    font-family: "inder-regular";
+    font-size: 24px;
+    padding: 19px 34px;
+    border-radius: 10px;
+    position: absolute;
+    top: 486px;
+    right: 100px;
 }
