@@ -168,3 +168,56 @@ main .section__contentt a{
     padding: 19px 34px;
     border-radius: 10px;
 }
+@media (max-width: 440px){
+    body{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 95px) 50px 1fr;
+        grid-template-areas: "logo logo logo" 
+                            "menu menu menu"
+                            "option option option"
+                            "product product product"
+                            "content content content";
+        padding: 4% 1%;
+        row-gap: 1%;
+    }
+    header .div__logo{
+        align-items: center;
+        justify-content: center;
+        grid-area: logo;
+    
+    }
+    header nav{
+        grid-area: menu;
+    }
+
+    header nav ul{
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+        gap: 10px;
+        justify-content: normal;
+    }
+    header nav ul > li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        min-width: 40%;
+    }
+    header nav ul li a{
+        width: 150px;
+        text-align: center;
+        display: block;
+    }
+    header .div__option{
+        grid-area: option;
+        display: flex;
+        height: 28px;
+        align-items: center;
+        justify-content: center;
+        gap: 2%;
+        padding: 0;
+    }
+
+}
