@@ -262,4 +262,28 @@ main .section__contentt a{
         position: absolute;
         transform: rotate(375deg);
     }
+    main .section__contentt{
+        grid-area: content;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    main .section__contentt article{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 0 30px 0;
+    }
+    main .section__contentt article h1{
+        text-align: center;
+    }
+    main .section__contentt article p:nth-child(3){
+        width: 100%;
+    }
+    main .section__contentt a{
+        margin-bottom: 20px;
+    }
+
 }
