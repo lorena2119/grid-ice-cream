@@ -60,7 +60,6 @@ header .div__option{
     padding-right: 19%;
     gap: 12%
 }
-
 header .div__option img{
     object-fit: cover;
 }
