@@ -179,3 +179,46 @@ main .section__contentt a{
     top: 486px;
     right: 100px;
 }
+
+@media(max-width: 440px){
+    body{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 95px) 58px 1fr 294px;
+        padding: 0;
+        grid-template-areas: "logo logo logo" 
+                            "menu menu menu" 
+                            "option option option"
+                            "img img img"
+                            "content content content";
+    }
+    header{
+        display: inline;
+        flex-direction: column;
+    }
+    header .div__logo{
+        grid-area: logo;
+        width: 100%;
+    }
+    header nav{ 
+        grid-area: menu;
+        padding: 0 1%;
+    }
+    header nav ul{
+        overflow-x: scroll;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    header .div__option{
+        grid-area: option;
+    }
+    main{
+        display: inline;
+    }
+    main .section__product{
+        grid-area: img;
+        display: flex;
+        flex-direction: column;
+    }
+}
