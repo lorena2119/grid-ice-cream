@@ -9,26 +9,25 @@
 body{
     background-color: var(--color-3);
     padding: 0 1%;
-}
-
-header{
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-areas: "logo logo menu menu menu menu menu menu option option";
+    grid-template-rows: 128px 1fr;
+    grid-template-areas: "logo logo menu menu menu menu menu menu option option" 
+    "product product product product product content content content content content";
     column-gap: 2%;
-    padding-top: 23px;
+    row-gap: 3%;
 }
-
+header{
+    display: contents;
+}
 header .div__logo{
     grid-area: logo;
     display: flex;
-    height: 95px;
+    height: 100%;
     align-items: center;
     justify-content: center;
 }
 header .div__logo img{
-    height: 100%;
-    width: 80%;
     object-fit: contain;
 }
 
@@ -40,7 +39,6 @@ header nav{
 }
 
 header nav ul{
-    grid-area: menu;
     display: flex;
     justify-content: center;
     gap: 33px;
@@ -66,30 +64,24 @@ header .div__option{
 header .div__option img{
     object-fit: cover;
 }
-
 main{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 137% 1fr;
-    grid-template-areas: "product content";
-    column-gap: 2%;
-    padding-top: 4%;
+    display: contents;
 }
-
 main .section__product{
-    grid-area: product;
     position: relative;
-    
+    grid-area: product;
+    height: 86svh;
+    align-items: flex-end;
 }
-
 main .section__product article{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 0;
-    right: 0;
     padding: 10px;
     color: var(--color-1);
 }
@@ -122,22 +114,23 @@ main .section__product > img:nth-child(3){
     transform: rotate(57.18deg);
     z-index: 2;
     bottom: -125px;
-    left: 0;
+    left: 25px;
 }
 main .section__product > img:nth-child(4){
     position: absolute;
     transform: rotate(85.74deg);
     z-index: 1;
     bottom: -255px;
-    left: 0;
+    left: 20px;
 }
 
 main .section__contentt{
     grid-area: content;
     display: flex;
-    position: relative;
     flex-direction: column;
-    align-items:  flex-start
+    align-items:  flex-end;
+    justify-content: center;
+    padding-right: 67px;
 }
 
 main .section__contentt article{
@@ -146,12 +139,12 @@ main .section__contentt article{
     justify-content: center;
     align-items: center;
     color: var(--color-1);
-    padding: 123px 0 69px 0;
+    padding: 0 0 69px 0;
 
 }
 
 main .section__contentt article h1{
-    font-family: "Inter_28pt-Bold";
+    font-family: "Inter_28pt-SemiBold";
     font-size: 69.56px;
 }
 
@@ -175,7 +168,4 @@ main .section__contentt a{
     font-size: 24px;
     padding: 19px 34px;
     border-radius: 10px;
-    position: absolute;
-    top: 486px;
-    right: 100px;
 }
