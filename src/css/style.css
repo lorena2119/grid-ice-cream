@@ -219,5 +219,47 @@ main .section__contentt a{
         gap: 2%;
         padding: 0;
     }
+    main .section__product{
+        grid-area: product;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        height: 80svh;
+        overflow-x: hidden;
+    }
+    main .section__product article{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
 
+    main .section__product img:nth-child(2),
+    main .section__product img:nth-child(3),
+    main .section__product img:nth-child(4){
+        position: absolute;
+        height: 500px;
+        bottom: 0;
+        inset:0;
+        margin: auto;
+        
+    }
+    main .section__product > img:nth-child(2){
+        position: absolute;
+        transform: rotate(-10deg);
+        left: -50%;
+
+    }
+    main .section__product > img:nth-child(3){
+        position: absolute;
+        transform: rotate(40deg);
+        z-index: -1;
+        right: -50%;
+    }
+    main .section__product > img:nth-child(4){
+        position: absolute;
+        transform: rotate(375deg);
+    }
 }
